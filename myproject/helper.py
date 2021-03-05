@@ -5,6 +5,12 @@ class Helper():
     def __init__(self, test:str = "test"):
         self.test = test
 
+    def isAdmin(self, user):
+        if user == "test":
+            return True
+        else:
+            return False
+
     def get_obfapp_connection(self):
         obfapp_db = mdb.connect("localhost", "test", "test", "testdb")
         return obfapp_db

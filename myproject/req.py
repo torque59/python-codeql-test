@@ -7,7 +7,7 @@ helper = Helper("test")
 
 @app.route('/update/<qid>/<status>', methods=['GET'])
 def update(qid, status):
-	if helper.test == "test":
+	if helper.isAdmin("test"):
 		helper.approve_status_update(qid,status)
 	else:
 		return "nothing"
